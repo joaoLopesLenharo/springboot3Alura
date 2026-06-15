@@ -1,0 +1,173 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-06-15T15:20:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.2.0",
+  "resources": [
+    {
+      "_id": "wrk_vollmed",
+      "parentId": null,
+      "modified": 1600000000000,
+      "created": 1600000000000,
+      "name": "Voll.med API",
+      "description": "Testes para API Voll.med",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_vollmed",
+      "parentId": "wrk_vollmed",
+      "modified": 1600000000000,
+      "created": 1600000000000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:8080"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1600000000000,
+      "_type": "environment"
+    },
+    {
+      "_id": "fld_hello",
+      "parentId": "wrk_vollmed",
+      "modified": 1600000000000,
+      "created": 1600000000000,
+      "name": "Hello",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1600000000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_hello",
+      "parentId": "fld_hello",
+      "modified": 1600000000000,
+      "created": 1600000000000,
+      "url": "{{ _.base_url }}/hello",
+      "name": "Hello World",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1600000000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_medicos",
+      "parentId": "wrk_vollmed",
+      "modified": 1600000000000,
+      "created": 1600000000000,
+      "name": "Médicos",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1500000000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_listar_medicos",
+      "parentId": "fld_medicos",
+      "modified": 1600000000000,
+      "created": 1600000000000,
+      "url": "{{ _.base_url }}/medicos",
+      "name": "Listar",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1600000000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_cadastrar_medicos",
+      "parentId": "fld_medicos",
+      "modified": 1600000000000,
+      "created": 1600000000000,
+      "url": "{{ _.base_url }}/medicos",
+      "name": "Cadastrar",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"Rodrigo\",\n\t\"email\": \"rodrigo.voll@gmail.com\",\n\t\"crm\": \"123456\",\n\t\"especialidade\": \"ORTOPEDIA\",\n\t\"endereco\": {\n\t\t\"logradouro\": \"rua 1\",\n\t\t\"bairro\": \"bairro\",\n\t\t\"cep\": \"12345678\",\n\t\t\"cidade\": \"Brasilia\",\n\t\t\"uf\": \"DF\",\n\t\t\"numero\": \"1\",\n\t\t\"complemento\": \"complemento\"\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1500000000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_pacientes",
+      "parentId": "wrk_vollmed",
+      "modified": 1600000000000,
+      "created": 1600000000000,
+      "name": "Pacientes",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1400000000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_listar_pacientes",
+      "parentId": "fld_pacientes",
+      "modified": 1600000000000,
+      "created": 1600000000000,
+      "url": "{{ _.base_url }}/pacientes",
+      "name": "Listar",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1600000000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    }
+  ]
+}
